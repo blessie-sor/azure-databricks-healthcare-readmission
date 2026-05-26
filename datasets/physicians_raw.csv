@@ -1,0 +1,51 @@
+physician_id,full_name,specialization,assigned_branch,physician_type
+DR001,Dr. Jose Co,Gastroenterology,H004,Attending
+DR002,Dr. Kenneth Cruz,Internal Medicine,H007,Attending
+DR003,Dr. Rafael Torres,Obstetrics,H010,Attending
+DR004,Dr. Kenneth Villanueva,Endocrinology,H008,Attending
+DR005,Dr. Miguel Sy,Infectious Disease,H006,Attending
+DR006,Dr. Ramon Bautista,Nephrology,H007,Attending
+DR007,Dr. Fe Gutierrez,Cardiology,H008,Attending
+DR008,Dr. Cristina Delos Santos,Gastroenterology,H010,Consultant
+DR009,Dr. Veronica Mendoza,Nephrology,H001,Attending
+DR010,Dr. Cristina Chan,Endocrinology,H002,Attending
+DR011,Dr. Melinda Garcia,Oncology,H006,Attending
+DR012,Dr. Cristina Aguilar,Pulmonology,H009,Consultant
+DR013,Dr. Patrick Ramos,Gastroenterology,H009,Attending
+DR014,Dr. Ana Torres,Cardiology,H006,Attending
+DR015,Dr. Rafael Macaraeg,Internal Medicine,H006,Attending
+DR016,Dr. Rosario Dela Torre,Neurology,H003,Attending
+DR017,Dr. Kenneth Delos Santos,Gastroenterology,H010,Attending
+DR018,Dr. Melinda Torres,Pulmonology,H009,Attending
+DR019,Dr. Carlo Ocampo,Pulmonology,H007,Attending
+DR020,Dr. Rosario Aguilar,Neurology,H009,Attending
+DR021,Dr. Carlo Tan,Obstetrics,H005,Consultant
+DR022,Dr. Lorena Flores,Infectious Disease,H003,Attending
+DR023,Dr. Patricia Uy,Pulmonology,H009,Consultant
+DR024,Dr. Patricia Aguilar,Endocrinology,H003,Attending
+DR025,Dr. Kenneth Uy,Obstetrics,H001,Attending
+DR026,Dr. Maria Bautista,Oncology,H005,Attending
+DR027,Dr. Mark Cruz,Nephrology,H008,Consultant
+DR028,Dr. Angelo Tan,Neurology,H009,Attending
+DR029,Dr. Angelica Macaraeg,Obstetrics,H004,Consultant
+DR030,Dr. Melinda Castillo,Obstetrics,H008,Attending
+DR031,Dr. Marco Aquino,Cardiology,H010,Attending
+DR032,Dr. Jose Cruz,Cardiology,H004,Attending
+DR033,Dr. Ramon Cruz,Obstetrics,H004,Attending
+DR034,Dr. Angelica Delos Santos,Pulmonology,H010,Attending
+DR035,Dr. Jerome Chua,Infectious Disease,H004,Attending
+DR036,Dr. Melinda Villanueva,Infectious Disease,H008,Consultant
+DR037,Dr. Carlo Reyes,Infectious Disease,H006,Consultant
+DR038,Dr. Gabriel Mendoza,Endocrinology,H009,Attending
+DR039,Dr. Jennifer Gutierrez,Neurology,H004,Consultant
+DR040,Dr. Patrick Chua,Obstetrics,H002,Attending
+DR041,Dr. Marco Macaraeg,Endocrinology,H003,Attending
+DR042,Dr. Angelica Chan,Infectious Disease,H001,Attending
+DR043,Dr. Dennis Gutierrez,Neurology,H005,Attending
+DR044,Dr. Maricel Mendoza,Gastroenterology,H004,Consultant
+DR045,Dr. Ramon Reyes,Cardiology,H010,Attending
+DR046,Dr. Juan Gonzales,Nephrology,H003,Attending
+DR047,Dr. Gabriel Ramos,Nephrology,H010,Attending
+DR048,Dr. Bryan Cruz,Infectious Disease,H010,Attending
+DR049,Dr. Michelle Mendoza,Oncology,H004,Attending
+DR050,Dr. Eduardo Castillo,Oncology,H002,Attending

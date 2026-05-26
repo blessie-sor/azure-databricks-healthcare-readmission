@@ -1,0 +1,11 @@
+hospital_id,hospital_name,branch_code,city,region,hospital_class,bed_count,year_opened,status,network_region_cluster
+H001,MediLuzon General Hospital - Manila Flagship,MLH-MNL,Manila,NCR,Tertiary,350,2005,Active,NCR Cluster
+H002,MediLuzon General Hospital - Quezon City,MLH-QC,Quezon City,NCR,Tertiary,280,2008,Active,NCR Cluster
+H003,MediLuzon Specialist Center - Makati,MLH-MKT,Makati,NCR,Specialty,180,2010,Active,NCR Cluster
+H004,MediLuzon Community Hospital - Batangas,MLH-BTG,Batangas City,Region IV-A,Secondary,120,2012,Active,Luzon Cluster
+H005,MediLuzon Community Hospital - Pampanga,MLH-PMP,"San Fernando, Pampanga",Region III,Secondary,150,2013,Active,Luzon Cluster
+H006,MediLuzon General Hospital - Cebu,MLH-CBU,Cebu City,Region VII,Tertiary,220,2015,Active,Visayas Cluster
+H007,MediLuzon Community Hospital - Iloilo,MLH-ILO,Iloilo City,Region VI,Secondary,130,2016,Active,Visayas Cluster
+H008,MediLuzon General Hospital - Davao,MLH-DVO,Davao City,Region XI,Tertiary,200,2017,Active,Mindanao Cluster
+H009,MediLuzon Community Hospital - Cagayan de Oro,MLH-CDO,Cagayan de Oro,Region X,Secondary,110,2019,Active,Mindanao Cluster
+H010,MediLuzon Specialist Center - Bonifacio Global City,MLH-BGC,Taguig,NCR,Specialty,160,2021,Active,NCR Cluster

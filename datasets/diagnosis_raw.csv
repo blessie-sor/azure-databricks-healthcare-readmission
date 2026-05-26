@@ -1,0 +1,29 @@
+diagnosis_code,diagnosis_desc,diagnosis_category,readmission_risk_level
+I10,Essential Hypertension,Cardiovascular,Medium
+I50,Heart Failure,Cardiovascular,High
+I21,Acute Myocardial Infarction,Cardiovascular,High
+I63,Ischemic Stroke,Cardiovascular,High
+I61,Intracerebral Hemorrhage,Cardiovascular,High
+I48,Atrial Fibrillation,Cardiovascular,Medium
+E11,Type 2 Diabetes Mellitus,Metabolic,Medium
+E86,Dehydration,Metabolic,Low
+J18,Pneumonia,Respiratory,Medium
+J44,COPD,Respiratory,High
+J45,Asthma,Respiratory,Medium
+A15,Pulmonary Tuberculosis,Respiratory,Medium
+N18,Chronic Kidney Disease (CKD),Renal,High
+N17,Acute Kidney Failure,Renal,High
+K92,Gastrointestinal Hemorrhage,Gastrointestinal,Medium
+K70,Alcoholic Liver Disease,Gastrointestinal,High
+A09,Infectious Gastroenteritis,Infectious,Low
+A90,Dengue Fever,Infectious,Medium
+A91,Dengue Hemorrhagic Fever,Infectious,High
+A01,Typhoid Fever,Infectious,Medium
+A41,Sepsis,Critical Care,High
+C18,Colon Cancer,Oncology,High
+C34,Lung Cancer,Oncology,High
+C50,Breast Cancer,Oncology,High
+G40,Epilepsy,Neurological,Medium
+O14,Pre-eclampsia,Maternal,Medium
+Z49,Dialysis Care Encounter,Procedure,High
+Z51,Chemotherapy / Radiotherapy,Procedure,High
