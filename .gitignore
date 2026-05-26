@@ -216,3 +216,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Databricks specific
+checkpoints/
+**/checkpoint/
+**/delta_log/
+
+# Data lake files (avoid pushing big outputs)
+*.parquet
+*.delta
+
+# Databricks notebooks metadata
+.ipynb_checkpoints/
+
+# Secrets
+.env
+*.key
+*.pem
