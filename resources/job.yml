@@ -3,6 +3,9 @@ resources:
     readmission_proj_job:
       name: readmission-proj-job
       tasks:
+        - task_key: init_logging
+          notebook_task:
+          notebook_path: ../bronze/init_pipeline_logging.ipynb
         - task_key: run_bronze_raw_ingestion
           notebook_task:
             notebook_path: ../bronze/run_bronze.ipynb
