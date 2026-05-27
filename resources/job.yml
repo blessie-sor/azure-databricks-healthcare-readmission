@@ -4,8 +4,8 @@ resources:
       name: readmission-proj-job
       tasks:
         - task_key: init_logging
-          notebook_task:
-          notebook_path: ../bronze/init_pipeline_logging.ipynb
+          notebook_path: /Workspace/Users/sorbingsu_gmail.com#ext#@sorbingsugmail.onmicrosoft.com/.bundle/azure-databricks-healthcare-readmission/dev/files/bronze/init_pipeline_logging
+          source: WORKSPACE
         - task_key: run_bronze_raw_ingestion
           notebook_task:
             notebook_path: ../bronze/run_bronze.ipynb
