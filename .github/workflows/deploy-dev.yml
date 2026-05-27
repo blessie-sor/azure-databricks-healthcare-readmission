@@ -28,4 +28,4 @@ jobs:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
         run: |
-          databricks jobs run-now --job_id 33786641711780
+          databricks jobs run-now --job-id 33786641711780
