@@ -233,3 +233,4 @@ checkpoints/
 .env
 *.key
 *.pem
+.DS_Store

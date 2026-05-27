@@ -1,0 +1,19 @@
+bundle:
+  name: azure-databricks-healthcare-readmission
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    workspace: 
+      host: https://adb-7405615544210384.4.azuredatabricks.net
+  
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-7405615544210384.4.azuredatabricks.net
+      root_path: /Workspace/.bundle/${bundle.name}/${bundle.target}
+
+
