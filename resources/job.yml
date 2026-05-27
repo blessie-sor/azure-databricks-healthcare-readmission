@@ -1,0 +1,51 @@
+resources:
+  jobs:
+    readmission_proj_job:
+      name: readmission-proj-job
+      tasks:
+        - task_key: run_bronze_raw_ingestion
+          notebook_task:
+            notebook_path: ../bronze/run_bronze.ipynb
+            source: WORKSPACE
+        - task_key: dim_diagnosis_ingestion
+          depends_on:
+            - task_key: run_bronze_raw_ingestion
+          notebook_task:
+            notebook_path: ../silver/dim_diagnosis_silver.ipynb
+            source: WORKSPACE
+        - task_key: dim_hospitals_ingestion
+          depends_on:
+            - task_key: run_bronze_raw_ingestion
+          notebook_task:
+            notebook_path: ../silver/dim_hospitals_silver.ipynb
+            source: WORKSPACE
+        - task_key: dim_patients_ingestion
+          depends_on:
+            - task_key: run_bronze_raw_ingestion
+          notebook_task:
+            notebook_path: ../silver/dim_patients_silver.ipynb
+            source: WORKSPACE
+        - task_key: dim_physicians_ingestion
+          depends_on:
+            - task_key: run_bronze_raw_ingestion
+          notebook_task:
+            notebook_path: ../silver/dim_physicians_silver.ipynb
+            source: WORKSPACE
+        - task_key: fact_visits_ingestion
+          depends_on:
+            - task_key: dim_diagnosis_ingestion
+            - task_key: dim_hospitals_ingestion
+            - task_key: dim_patients_ingestion
+            - task_key: dim_physicians_ingestion
+          notebook_task:
+            notebook_path: ../silver/fact_visits_silver.ipynb
+            source: WORKSPACE
+        - task_key: readmission_analysis_
+          depends_on:
+            - task_key: fact_visits_ingestion
+          notebook_task:
+            notebook_path: ../gold/readmission_analysis_gold.ipynb
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
