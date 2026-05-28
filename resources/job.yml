@@ -2,8 +2,6 @@ resources:
   jobs:
     readmission_proj_job:
       name: readmission-proj-job
-      run_as:
-        user_name: sorbingsu_gmail.com#ext#@sorbingsugmail.onmicrosoft.com
       tasks:
         - task_key: init_logging
           notebook_task:
