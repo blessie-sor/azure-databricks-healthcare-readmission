@@ -26,7 +26,7 @@ Dev job runs automatically             Prod job triggered manually
 **Workflow task dependencies**
 
 ```
-run_bronze_raw  _ingestion
+run_bronze_raw_ingestion
          ↓
 dim_diagnosis · dim_hospitals · dim_patients · dim_physicians  (parallel)
          ↓
@@ -158,7 +158,7 @@ erDiagram
 - **Standardization of formats** - gender format, renaming of columns, date parsing 
 - **Validation of referential integrity** - all foreign keys in fact table connect to dimension records
 
-## Key Findings
+### Key Findings
 
 From 3,000 valid visits across 10 branches:
 
