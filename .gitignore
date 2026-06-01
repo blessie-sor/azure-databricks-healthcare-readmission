@@ -221,6 +221,7 @@ __marimo__/
 checkpoints/
 **/checkpoint/
 **/delta_log/
+.databricks/
 
 # Data lake files (avoid pushing big outputs)
 *.parquet
