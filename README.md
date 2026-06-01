@@ -1,7 +1,5 @@
 ## MediLuzon Health Network — Hospital Readmission Data Pipeline
 
-> An end-to-end data engineering project built on Azure Databricks, Delta Lake, and GitHub Actions — centralising hospital data from 10 branches across the Philippines into a unified readmission platform.
-
 ### Overview
 This project builds an **end-to-end data engineering pipeline** for **MediLuzon Health Network**, a fictional private hospital group with 10 branches across the Philippines. Raw hospital data from five source systems is ingested, cleaned, and transformed through a **medallion architecture** on Azure Databricks, producing six Gold KPI tables that answer the network's core question: which branches, diagnoses, and physicians are driving the highest 30-day readmission rates.
 
@@ -49,7 +47,7 @@ Five CSV files simulating exports from MediLuzon's Hospital Information System.
 
 ### Data Modeling
 
-### Star Schema
+#### Star Schema
 
 `fact_visits` sits at the center with four surrounding dimension tables.
 
@@ -133,6 +131,8 @@ erDiagram
 
 - Fact Table - Hospital visits
 - Dimension Tables - Diagnosis, Patients, Hospitals, Physicians
+
+The Silver fact_visits table uses a denormalized design wherein dimension attributes are pre-joined into the table, simplifying Gold aggregations with no joins required. Dimension tables remain normalized (each attribute stored in one place), and serve as reference tables that provide context for the measures in fact_visits.
 
 
 ### Data Quality Checks
