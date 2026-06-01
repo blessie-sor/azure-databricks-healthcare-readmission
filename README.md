@@ -1,12 +1,13 @@
-### MediLuzon Health Network — Hospital Readmission Data Pipeline
+## MediLuzon Health Network — Hospital Readmission Data Pipeline
 
 > An end-to-end data engineering project built on Azure Databricks, Delta Lake, and GitHub Actions — centralising hospital data from 10 branches across the Philippines into a unified readmission platform.
 
 ### Overview
-This project builds an *end-to-end data engineering pipeline* for *MediLuzon Health Network*, a fictional private hospital group with 10 branches across the Philippines. Raw hospital data from five source systems is ingested, cleaned, and transformed through a *medallion architecture* on Azure Databricks, producing six Gold KPI tables that answer the network's core question: which branches, diagnoses, and physicians are driving the highest 30-day readmission rates.
+This project builds an **end-to-end data engineering pipeline** for **MediLuzon Health Network**, a fictional private hospital group with 10 branches across the Philippines. Raw hospital data from five source systems is ingested, cleaned, and transformed through a **medallion architecture** on Azure Databricks, producing six Gold KPI tables that answer the network's core question: which branches, diagnoses, and physicians are driving the highest 30-day readmission rates.
 
 The pipeline handles challenges including incremental ingestion with Auto Loader, schema evolution, data cleaning, PII pseudonymization, Delta merge/upsert, and automated deployment via Databricks Asset Bundles and GitHub Actions.
 
+### Data Architecture
 
 **CI/CD flow**
 
@@ -19,7 +20,7 @@ deploy-dev.yml                        deploy-prod.yml
 databricks bundle deploy --target dev  databricks bundle deploy --target prod
        ↓                                      ↓
 Dev job runs automatically             Prod job triggered manually
-(job ID defined in deploy-dev.yml)     after dev run verified
+                                       after dev run verified
 ```
 
 **Workflow task dependencies**
@@ -35,8 +36,7 @@ readmission_analysis_gold
 ```
 
 
-## Tech Stack
-
+### Tech Stack
 | Component | Tool |
 |---|---|
 | Cloud Platform | Microsoft Azure |
@@ -52,19 +52,18 @@ readmission_analysis_gold
 | Catalog | Unity Catalog |
 
 
-## Data Sources
-
+### Data Sources
 Five CSV files simulating exports from MediLuzon's Hospital Information System. 
 
 | File | Description |
 |---|---|
-| `hospital_raw.csv` | Hospital branch data 
+| `hospitals_raw.csv` | Hospital branch and cluster data 
 | `diagnosis_raw.csv`| Diagnosis data
-| `patient_raw.csv` | Patient demographics
-| `physician_raw.csv` | Physician data 
-| `visit_raw.csv` | Hospital visits data
+| `patients_raw.csv` | Patient demographics
+| `physicians_raw.csv` | Physician data 
+| `visits_raw.csv` | Hospital visits data
 
-## Data Modeling
+### Data Modeling
 
 ### Star Schema
 
@@ -147,20 +146,21 @@ erDiagram
         timestamp load_timestamp
     }
 ```
-Fact Table - Hospital Visits
-Dimension Tables - Diagnosis, Patients, Hospitals, Physicians
+
+- Fact Table - Hospital visits
+- Dimension Tables - Diagnosis, Patients, Hospitals, Physicians
 
 
-## Data Quality Checks
+### Data Quality Checks
 
-- Deduplication - dropping duplicates across all dimension tables
-- Handling of missing and invalid values - null checks on critical columns 
-- Standardization of formats - gender format, renaming of columns, date parsing 
-- Validation of referential integrity - all foreign keys in fact table connect to dimension records
+- **Deduplication** - dropping duplicates across all dimension tables
+- **Handling of missing and invalid values** - null checks on critical columns 
+- **Standardization of formats** - gender format, renaming of columns, date parsing 
+- **Validation of referential integrity** - all foreign keys in fact table connect to dimension records
 
 ## Key Findings
 
-From 3,000 valid visits across 10 branches  :
+From 3,000 valid visits across 10 branches:
 
 | KPI | Value |
 |---|---|
@@ -175,7 +175,7 @@ From 3,000 valid visits across 10 branches  :
 | Average cost per visit | PHP 57,548 |
 
 
-## Deployment
+### Deployment
 
 **Databricks Asset Bundles** with two targets:
 
@@ -184,24 +184,21 @@ targets:
   dev:
     mode: development
     workspace:
-      host: https://adb-xxxx.azuredatabricks.net
+      host: ${DATABRICKS_HOST}
 
   prod:
     mode: production
     workspace:
-      host: https://adb-xxxx.azuredatabricks.net
+      host: ${DATABRICKS_HOST}
 ```
 
 GitHub Actions triggers:
 
-- Push to `dev` → `deploy-dev.yml` → deploys and **runs the dev job automatically**
-  (Databricks job ID configured in `deploy-dev.yml`)
-- Push to `main` → `deploy-prod.yml` → deploys to prod → **prod job triggered manually**
-  after confirming dev run succeeded — require approval before touching production
+- Push to `dev` → `deploy-dev.yml` → deploys and runs the dev job automatically
+- Push to `main` → `deploy-prod.yml` → deploys to prod → prod job triggered manually
 
----
 
-## Next Steps
+###  Next Steps
 
 - **Databricks Genie** — connect Gold KPI tables to Genie for natural language querying and self-serve analytics for the MediLuzon operations team
 - **Power BI dashboard** — connect to Databricks SQL endpoint for KPI reporting 
