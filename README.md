@@ -6,6 +6,7 @@ This project builds an **end-to-end data engineering pipeline** for **MediLuzon 
 The pipeline handles challenges including incremental ingestion with Auto Loader, schema evolution, data cleaning, PII pseudonymization, Delta merge/upsert, and automated deployment via Databricks Asset Bundles and GitHub Actions.
 
 ### Data Architecture
+<img width="712" height="615" alt="data_architecture_readmission_proj" src="https://github.com/user-attachments/assets/5e899f8a-2e8a-43fb-aedd-4d80b19bd0eb" />
 
 **CI/CD flow**
 
