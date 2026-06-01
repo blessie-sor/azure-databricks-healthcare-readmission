@@ -191,7 +191,7 @@ targets:
       host: ${DATABRICKS_HOST}
 ```
 
-**GitHub Actions triggers**:
+**GitHub Actions** triggers:
 - Push to `dev` → `deploy-dev.yml` → deploys and runs the dev job automatically
 - Push to `main` → `deploy-prod.yml` → deploys to prod → prod job triggered manually
 
