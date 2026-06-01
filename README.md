@@ -36,22 +36,6 @@ readmission_analysis_gold
 ```
 
 
-### Tech Stack
-| Component | Tool |
-|---|---|
-| Cloud Platform | Microsoft Azure |
-| Storage | Azure Data Lake Storage Gen2 (ADLS) |
-| Compute & Processing | Azure Databricks |
-| Table Format | Delta Lake |
-| Ingestion | Auto Loader (`cloudFiles`) |
-| Language | PySpark (Python) |
-| Orchestration | Databricks Workflows |
-| Deployment | Databricks Asset Bundles |
-| CI/CD | GitHub Actions |
-| Version Control | GitHub |
-| Catalog | Unity Catalog |
-
-
 ### Data Sources
 Five CSV files simulating exports from MediLuzon's Hospital Information System. 
 
@@ -174,6 +158,20 @@ From 3,000 valid visits across 10 branches:
 | Average length of stay | 5.2 days |
 | Average cost per visit | PHP 57,548 |
 
+### Tech Stack
+| Component | Tool |
+|---|---|
+| Cloud Platform | Microsoft Azure |
+| Storage | Azure Data Lake Storage Gen2 (ADLS) |
+| Compute & Processing | Azure Databricks |
+| Table Format | Delta Lake |
+| Ingestion | Auto Loader (`cloudFiles`) |
+| Language | PySpark (Python) |
+| Orchestration | Databricks Workflows |
+| Deployment | Databricks Asset Bundles |
+| CI/CD | GitHub Actions |
+| Version Control | GitHub |
+| Catalog | Unity Catalog |
 
 ### Deployment
 
