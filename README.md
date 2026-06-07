@@ -150,14 +150,14 @@ From 3,000 valid visits across 10 branches:
 | KPI | Value |
 |---|---|
 | Overall 30-day readmission rate | 38.2% |
-| Highest branch readmission rate | MediLuzon General Hospital – Davao (41.5%) |
-| Lowest branch readmission rate | MediLuzon Community Hospital – Pampanga (35.6%) |
-| Top diagnosis by readmission volume | Essential Hypertension — I10 |
-| Top diagnosis by readmission rate | Chronic Kidney Disease — N18 (68.0%) |
-| High-risk diagnosis readmission rate | 46.2% vs Medium-risk 30.2% |
-| Highest specialization readmission rate | Oncology (47.8%) |
 | Average length of stay | 5.2 days |
 | Average cost per visit | PHP 57,548 |
+| Highest branch readmission rate | MediLuzon General Hospital – Davao (41.5%) |
+| Lowest branch readmission rate | MediLuzon Community Hospital – Pampanga (35.1%) |
+| Top diagnosis by readmission volume | Essential Hypertension — I10 |
+| Top diagnosis by readmission rate | Chronic Kidney Disease — N18 (68.0%) |
+| Highest specialization readmission rate | Oncology (47.8%) |
+
 
 ### Tech Stack
 | Component | Tool |
